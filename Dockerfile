@@ -13,4 +13,4 @@ RUN apk update && \
     libjpeg-turbo-dev && \
     printf "\n" | pecl install redis-5.1.1 && \
     docker-php-ext-configure gd && \
-    docker-php-ext-install gd pdo_mysql
+    docker-php-ext-install bcmath gd pdo_mysql
