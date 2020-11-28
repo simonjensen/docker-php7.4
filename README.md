@@ -18,6 +18,7 @@ Comes with the following modules installed:
 - json
 - libxml
 - mbstring
+- mongodb
 - mysqlnd
 - openssl
 - pcre
