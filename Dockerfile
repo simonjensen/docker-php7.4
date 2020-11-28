@@ -18,4 +18,4 @@ RUN apk update && \
     docker-php-ext-configure gd && \
     docker-php-ext-install bcmath gd pdo_mysql && \
     pecl install xdebug && \
-    pecl install mongodb
+    pecl uninstall mongodb && pecl install mongodb
