@@ -10,8 +10,8 @@ RUN apk update && \
     make \
     vim \
     libpng-dev \
-    libjpeg-turbo-dev && \
-    openssl-dev && \
+    libjpeg-turbo-dev \
+    openssl-dev \
     tzdata && \
     ln -s /usr/share/zoneinfo/Europe/Copenhagen /etc/localtime && \
     printf "\n" | pecl install redis-5.1.1 && \
