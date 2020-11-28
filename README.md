@@ -1,6 +1,6 @@
 # docker-php7.4
 
-Based on `php:7.4.0-fpm-alpine`.
+Based on `php:7.4.12-fpm-alpine`.
 
 Comes with the following modules installed:
 - bcmath
