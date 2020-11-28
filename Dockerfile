@@ -12,6 +12,8 @@ RUN apk update && \
     libpng-dev \
     libjpeg-turbo-dev && \
     openssl-dev && \
+    tzdata && \
+    ln -s /usr/share/zoneinfo/Europe/Copenhagen /etc/localtime && \
     printf "\n" | pecl install redis-5.1.1 && \
     docker-php-ext-configure gd && \
     docker-php-ext-install bcmath gd pdo_mysql && \
