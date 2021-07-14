@@ -37,6 +37,7 @@ Comes with the following modules installed:
 - sqlite3
 - standard
 - tokenizer
+- xdebug
 - xml
 - xmlreader
 - xmlwriter
