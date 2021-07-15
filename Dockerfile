@@ -15,6 +15,6 @@ RUN apk update && \
     tzdata && \
     ln -s /usr/share/zoneinfo/Europe/Copenhagen /etc/localtime && \
     printf "\n" | pecl install redis-5.1.1 && \
-    docker-php-ext-configure gd && \
+    docker-php-ext-configure gd -enable-gd --with-jpeg && \
     docker-php-ext-install bcmath gd pdo_mysql && \
     pecl uninstall mongodb && pecl install mongodb
