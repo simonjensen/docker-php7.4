@@ -1,17 +1,14 @@
 name: Build and Publish
 
 on:
-  pull_request:
-    types:
-      - closed
+  push:
+    branches:
+      - master
 
 jobs:
   build-and-publish:
     name: Build and Publish
     runs-on: ubuntu-latest
-
-    # Only run if the PR was "merged"
-    if: github.event.pull_request.merged == true
 
     steps:
       - name: Checkout repository
@@ -32,4 +29,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: simonjensen/docker-php7.4:${{ steps.short-sha.outputs.sha }},simonjensen/docker-php7.4:latest
+          tags: ${{ github.repository }}:7.4.33-fpm-alpine,${{ github.repository }}:${{ steps.short-sha.outputs.sha }},${{ github.repository }}:latest
