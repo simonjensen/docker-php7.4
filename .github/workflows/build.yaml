@@ -1,0 +1,21 @@
+name: Build Docker image
+
+on:
+  push:
+    branches-ignore:
+      - master
+
+jobs:
+  build-docker-image:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: false
+          tags: ${{ GITHUB_SHA }}
