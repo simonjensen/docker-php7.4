@@ -1,8 +1,11 @@
 # docker-php7.4
 
-Based on `php:7.4.12-fpm-alpine`.
+> A base image for PHP 7.4
+
+Based on `php:7.4.33-fpm-alpine`.
 
 Comes with the following modules installed:
+
 - bcmath
 - Core
 - ctype
